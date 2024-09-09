@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Generator from './components/Generator'
 import Workout from './components/Workout'
 import { generateWorkout } from './utils/functions'
+import Footer from './components/Footer'
 
 function App() {
   const [workout, setWorkout] = useState(null)
@@ -21,7 +22,7 @@ function App() {
   }
 
   return (
-    <main className='min-h-screen flex flex-col bg-gradient-to-r from-slate-800 to-zinc-950 text-white text-sm sm:text-base py-7'>
+    <main className='min-h-screen flex flex-col bg-gradient-to-r from-slate-800 to-zinc-950 text-white text-sm sm:text-base'>
       <Hero />
       <Generator 
       goal={goal} setGoal={setGoal} 
@@ -31,6 +32,8 @@ function App() {
       {
         workout && (<Workout workout={workout} />)
       }
+
+      <Footer />
     </main>
   )
 }
