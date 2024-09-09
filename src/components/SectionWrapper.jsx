@@ -12,6 +12,10 @@ export default function SectionWrapper(props) {
             {header === 'Welcome to' && 
               <span className='text-red-600'> {(title[1])} </span>
             }
+            {
+              header !== 'Welcome to' && 
+              <span> {(title[1])} </span>
+            }
             </span> 
           {title[2]}
           </h2>
